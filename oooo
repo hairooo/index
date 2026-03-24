@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gab's Scrapbook | Nursing & Notes</title>
+    <title>Gab's Scrapbook</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Homemade+Apple&family=Special+Elite&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #e6dfcf;
             --ink: #2b2621;
-            --sage-tape: rgba(135, 169, 130, 0.5);
+            --sage-tape: rgba(135, 169, 130, 0.4);
         }
 
         body {
@@ -17,79 +17,50 @@
             background-image: url('https://www.transparenttextures.com/patterns/papyrus.png');
             color: var(--ink);
             font-family: 'Special Elite', serif;
-            margin: 0;
-            padding: 40px;
-            display: flex;
-            justify-content: center;
+            margin: 0; padding: 40px;
+            display: flex; justify-content: center;
         }
 
         .scrapbook {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1.2fr;
             gap: 40px;
-            max-width: 1200px;
+            max-width: 1100px;
             width: 100%;
         }
 
-        header {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding-bottom: 30px;
-            border-bottom: 1px dashed var(--ink);
-        }
-
+        header { grid-column: 1 / -1; text-align: center; padding-bottom: 20px; }
         header h1 { font-family: 'Dancing Script', cursive; font-size: 5rem; margin: 0; }
 
-        /* Artists - With Hover Effect */
-        .artist-section {
+        /* Artists Grid - Hover Detail */
+        .artist-gallery {
             grid-column: 1 / -1;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px 0;
+            gap: 15px;
+            margin-bottom: 40px;
         }
 
         .polaroid {
-            background: #fff;
-            padding: 15px 15px 35px 15px;
-            box-shadow: 3px 5px 15px rgba(0,0,0,0.2);
-            transition: all 0.4s ease;
-            cursor: pointer;
-            width: 160px;
+            background: white;
+            padding: 10px 10px 30px 10px;
+            box-shadow: 3px 5px 15px rgba(0,0,0,0.15);
+            width: 150px;
+            transition: 0.4s;
             position: relative;
+            cursor: pointer;
         }
+        .polaroid img { width: 100%; height: 150px; object-fit: cover; }
+        .polaroid p { font-family: 'Homemade Apple', cursive; font-size: 0.75rem; margin-top: 10px; text-align: center; }
 
-        .polaroid img { width: 100%; height: 160px; object-fit: cover; }
-        
-        .polaroid:nth-child(odd) { transform: rotate(-2deg); }
-        .polaroid:nth-child(even) { transform: rotate(3deg); }
-
-        .polaroid-caption {
-            font-family: 'Homemade Apple', cursive;
-            font-size: 0.8rem;
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        /* Hover Detail Overlay */
-        .polaroid-detail {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+        .polaroid:hover { transform: scale(1.1) rotate(0deg); z-index: 10; }
+        .polaroid-info {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(255,255,255,0.95);
-            padding: 20px;
-            box-sizing: border-box;
-            opacity: 0;
-            transition: opacity 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 0.8rem;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: 0.3s; padding: 10px; text-align: center; font-size: 0.7rem;
         }
-
-        .polaroid:hover { transform: scale(1.1) rotate(0deg); z-index: 5; }
-        .polaroid:hover .polaroid-detail { opacity: 1; }
+        .polaroid:hover .polaroid-info { opacity: 1; }
 
         /* Paper Scraps */
         .paper-scrap {
@@ -98,36 +69,49 @@
             box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
             position: relative;
         }
-
         .tape {
-            position: absolute;
-            width: 80px;
-            height: 30px;
+            position: absolute; width: 70px; height: 25px;
             background: var(--sage-tape);
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%) rotate(-2deg);
+            top: -12px; left: 50%; transform: translateX(-50%) rotate(-2deg);
         }
 
         /* About Me Section */
-        .about-scrap { grid-column: 1 / 2; transform: rotate(-1deg); }
+        .about-section { transform: rotate(-1deg); height: fit-content; }
+        .about-section h3 { font-family: 'Homemade Apple', cursive; margin-top: 0; }
+
+        /* Songs Section - Now with Hover Effect */
+        .songs-section { transform: rotate(1deg); }
+        .song-card {
+            display: flex; align-items: center; gap: 15px;
+            margin-bottom: 20px; border-bottom: 1px dotted #ccc; padding-bottom: 15px;
+            transition: 0.3s ease;
+            cursor: help;
+        }
+        .song-card img { 
+            width: 60px; height: 60px; border-radius: 4px; 
+            box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
         
-        /* Songs Section - No Hover */
-        .songs-scrap { grid-column: 2 / 4; transform: rotate(1deg); }
-        
-        .song-item {
-            margin-bottom: 20px;
-            border-bottom: 1px dotted #ccc;
-            padding-bottom: 10px;
+        .song-desc { 
+            font-size: 0.8rem; 
+            line-height: 1.4;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
         }
 
-        iframe { border-radius: 8px; margin-top: 10px; }
-
-        @media (max-width: 768px) {
-            .scrapbook { display: block; }
-            .polaroid { width: 100%; margin-bottom: 20px; }
-            .paper-scrap { margin-bottom: 40px; }
+        /* Hover trigger for Songs */
+        .song-card:hover { background: rgba(255, 255, 255, 0.5); padding-left: 10px; border-radius: 10px; }
+        .song-card:hover img { transform: scale(1.1); }
+        .song-card:hover .song-desc {
+            max-height: 100px;
+            opacity: 1;
+            margin-top: 5px;
         }
+
+        @media (max-width: 768px) { .scrapbook { display: block; } .artist-gallery { flex-wrap: wrap; } }
     </style>
 </head>
 <body>
@@ -138,74 +122,100 @@
         <p>— A soul full of stories and dreams —</p>
     </header>
 
-    <div class="artist-section">
-        <div class="polaroid">
+    <div class="artist-gallery">
+        <div class="polaroid" style="transform: rotate(-3deg);">
             <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/Clairo.jpg" alt="Clairo">
-            <div class="polaroid-caption">Clairo</div>
-            <div class="polaroid-detail">The comfort of bedroom pop and soft melodies.</div>
+            <p>Clairo</p>
+            <div class="polaroid-info">Bedroom pop that feels like a warm hug.</div>
         </div>
-        <div class="polaroid">
+        <div class="polaroid" style="transform: rotate(2deg);">
             <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/CocteuTwins.jpg" alt="Cocteau Twins">
-            <div class="polaroid-caption">Cocteau Twins</div>
-            <div class="polaroid-detail">Ethereal, dream-like soundscapes.</div>
+            <p>Cocteau Twins</p>
+            <div class="polaroid-info">The architects of ethereal dream pop.</div>
         </div>
-        <div class="polaroid">
+        <div class="polaroid" style="transform: rotate(-1deg);">
             <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/FleetwoodMac.jpg" alt="Fleetwood Mac">
-            <div class="polaroid-caption">Fleetwood Mac</div>
-            <div class="polaroid-detail">Timeless harmonies and classic storytelling.</div>
+            <p>Fleetwood Mac</p>
+            <div class="polaroid-info">Legendary rock with perfect vocal harmonies.</div>
         </div>
-        <div class="polaroid">
+        <div class="polaroid" style="transform: rotate(4deg);">
             <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/WeyesBlood.jpg" alt="Weyes Blood">
-            <div class="polaroid-caption">Weyes Blood</div>
-            <div class="polaroid-detail">Cinematic, baroque pop with an old-soul feel.</div>
+            <p>Weyes Blood</p>
+            <div class="polaroid-info">A modern take on 70s baroque pop.</div>
         </div>
-        <div class="polaroid">
+        <div class="polaroid" style="transform: rotate(-2deg);">
             <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/MattMaltese.jpg" alt="Matt Maltese">
-            <div class="polaroid-caption">Matt Maltese</div>
-            <div class="polaroid-detail">Ballroom pop filled with dry wit and romance.</div>
+            <p>Matt Maltese</p>
+            <div class="polaroid-info">Dystopian romance and indie piano ballads.</div>
         </div>
     </div>
 
-    <article class="paper-scrap about-scrap">
+    <article class="paper-scrap about-section">
         <div class="tape"></div>
-        <h3 style="font-family: 'Homemade Apple', cursive; color: var(--accent-green);">About Me</h3>
-        [span_4](start_span)<p>Hello! I'm Gabriel[span_4](end_span).</p>
-        [span_5](start_span)<p>A **20-year-old** second-year **Nursing student** at **Bicol University Tabaco**[span_5](end_span).</p>
-        [span_6](start_span)<p><strong>Hobbies:</strong> Listening to music, binge-watching, and sleeping[span_6](end_span).</p>
-        <hr>
-        <p style="font-style: italic; font-size: 0.9rem;">
+        <h3>About Me</h3>
+        <p>Hello! I'm <b>Gabriel<b>.</p>
+        <p>A 20-year-old 2nd-year Nursing student at Bicol University Tabaco.</p>
+        <p>I enjoy listening to music, binge-watching films, and sleeping.</p>
+        <hr style="border: none; border-top: 1px dashed #ccc; margin: 20px 0;">
+        <p style="font-style: italic; font-size: 0.85rem;">
             "Love isn't something that weak people do. Being a romantic takes a hell of a lot of hope." <br>
-            <span style="font-family: 'Homemade Apple', cursive;">— Fleabag</span>
+            <span style="font-family: 'Homemade Apple', cursive; display: block; margin-top: 5px;">— Fleabag</span>
         </p>
     </article>
 
-    <article class="paper-scrap songs-scrap">
+    <article class="paper-scrap songs-section">
         <div class="tape"></div>
-        <h3 style="font-family: 'Homemade Apple', cursive;">Currently on Repeat</h3>
+        <h3 style="font-family: 'Homemade Apple', cursive;">Favorite Songs</h3>
+        <p style="font-size: 0.7rem; opacity: 0.6; margin-bottom: 15px;">(Hover to read more)</p>
         
-        <div class="song-item">
-            [span_7](start_span)<strong>Harbor</strong> — Clairo[span_7](end_span)
-            <iframe width="100%" height="113" src="https://www.youtube.com/embed/6m6S_6B2Iaw" frameborder="0" allow="encrypted-media"></iframe>
+        <div class="song-card">
+            <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/harbor.jpg" alt="Harbor">
+            <div>
+                <strong>Harbor — Clairo</strong>
+                <div class="song-desc">
+                    A quiet realization of a relationship’s end and the weight of being an emotional anchor.
+                </div>
+            </div>
         </div>
 
-        <div class="song-item">
-            [span_8](start_span)<strong>Rilkean Heart</strong> — Cocteau Twins[span_8](end_span)
-            <iframe width="100%" height="113" src="https://www.youtube.com/embed/7V-M7qBvG8A" frameborder="0" allow="encrypted-media"></iframe>
+        <div class="song-card">
+            <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/rilkeanheart.jpg" alt="Rilkean Heart">
+            <div>
+                <strong>Rilkean Heart — Cocteau Twins</strong>
+                <div class="song-desc">
+                    A poetic, shimmering dream about intense connection and tribute to Jeff Buckley.
+                </div>
+            </div>
         </div>
 
-        <div class="song-item">
-            [span_9](start_span)<strong>Andromeda</strong> — Weyes Blood[span_9](end_span)
-            <iframe width="100%" height="113" src="https://www.youtube.com/embed/Rgp_9j-N55E" frameborder="0" allow="encrypted-media"></iframe>
+        <div class="song-card">
+            <img src="https://raw.githubusercontent.com/hairooo/index/f8c01717babdbb0a51867d5b9086e5143328f682/images/Andromeda.jpg" alt="Andromeda">
+            <div>
+                <strong>Andromeda — Weyes Blood</strong>
+                <div class="song-desc">
+                    Exploring the struggle of opening your heart while feeling lost in the vast past.
+                </div>
+            </div>
         </div>
 
-        <div class="song-item">
-            [span_10](start_span)<strong>Dreams</strong> — Fleetwood Mac[span_10](end_span)
-            <iframe width="100%" height="113" src="https://www.youtube.com/embed/Y3ywicffOj4" frameborder="0" allow="encrypted-media"></iframe>
+        <div class="song-card">
+            <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/dreams.jpg" alt="Dreams">
+            <div>
+                <strong>Dreams — Fleetwood Mac</strong>
+                <div class="song-desc">
+                    A classic anthem about loneliness, freedom, and the cycle of love and loss.
+                </div>
+            </div>
         </div>
 
-        <div class="song-item">
-            [span_11](start_span)<strong>As the Irony Would Have It</strong> — Matt Maltese[span_11](end_span)
-            <iframe width="100%" height="113" src="https://www.youtube.com/embed/fA369qZp7sU" frameborder="0" allow="encrypted-media"></iframe>
+        <div class="song-card">
+            <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/Ironywouldhaveit.jpg" alt="Irony">
+            <div>
+                <strong>As the Irony Would Have It — Matt Maltese</strong>
+                <div class="song-desc">
+                    A humorous yet emotional ballad about the unpredictable timing of romance.
+                </div>
+            </div>
         </div>
     </article>
 </div>
