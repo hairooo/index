@@ -205,7 +205,7 @@
             </div>
 
             <div class="item-row">
-                <img src="Andromeda.jpg" alt="Andromeda">
+                <img src="https://raw.githubusercontent.com/hairooo/index/f8c01717babdbb0a51867d5b9086e5143328f682/images/Andromeda.jpg" alt="Andromeda">
                 <div style="flex-grow: 1;">
                     <strong><b>Andromeda<b></strong><br><small>Weyes Blood</small>
                     <div class="player-container">
