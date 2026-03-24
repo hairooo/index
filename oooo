@@ -174,9 +174,9 @@
 
     <article class="paper-scrap about-section">
         <div class="tape"></div>
-        <h3>About Me</h3>
+        <h3>About  Me</h3>
         <p>Hello! I'm <b>Gabriel<b>.</p>
-        <p>A 20-year-old 2nd-year Nursing student at Bicol University Tabaco.</p>
+        <p>A soul learning the art of healing, currently in her second year of nursing.</p>
         <p>I enjoy listening to music, binge-watching films, and sleeping.</p>
         <hr style="border: none; border-top: 1px dashed #ccc; margin: 20px 0;">
         <p style="font-style: italic; font-size: 0.85rem;">
@@ -187,7 +187,7 @@
 
     <article class="paper-scrap songs-section">
         <div class="tape"></div>
-        <h3 style="font-family: 'Homemade Apple', cursive;">Favorite Songs</h3>
+        <h3 style="font-family: 'Homemade Apple', cursive;">Favorite  Songs</h3>
         <p style="font-size: 0.7rem; opacity: 0.6; margin-bottom: 15px;">(Hover to read more)</p>
         
         <div class="song-card">
