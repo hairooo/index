@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Space | Landscape Edition</title>
+    <style>
+        :root {
+            --sage-deep: #4a5d45;
+            --sage-light: #87a982;
+            --glass: rgba(255, 255, 255, 0.15);
+            --text: #ffffff;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--sage-deep);
+            background: linear-gradient(135deg, #4a5d45 0%, #87a982 100%);
+            color: var(--text);
+            overflow-x: hidden; /* Prevent vertical scroll if content fits */
+        }
+
+        /* Landscape Wrapper */
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            width: 100vw;
+            padding: 20px;
+            box-sizing: border-box;
+            gap: 20px;
+            overflow-x: auto; /* Allows horizontal swiping on mobile/trackpads */
+            align-items: center;
+        }
+
+        /* Glass Panel Styling */
+        .panel {
+            min-width: 350px;
+            height: 80vh;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Specific Panel: About */
+        .about-panel {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        /* List Styling */
+        .list-container {
+            overflow-y: auto;
+            margin-top: 20px;
+            padding-right: 10px;
+        }
+
+        .item-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        /* The Hover Effect "Thingy" */
+        .item-row:hover {
+            background: white;
+            color: var(--sage-deep);
+            transform: scale(1.02);
+        }
+
+        .item-row img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Playable Song Section (Inside Hover) */
+        .player-container {
+            display: none;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .item-row:hover .player-container {
+            display: block;
+        }
+
+        .spotify-mini {
+            border-radius: 12px;
+            width: 100%;
+            height: 80px;
+        }
+
+        /* Responsive adjustments for phones */
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column; /* Stack vertically on small phones */
+                height: auto;
+            }
+            .panel {
+                width: 90%;
+                min-width: unset;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    
+    <section class="panel about-panel">
+        <img src="https://via.placeholder.com/180" alt="Me" class="profile-img">
+        <h1>Hi, I'm [Your Name]</h1>
+        <p>A lover of ethereal sounds and calm aesthetics. I enjoy building things and listening to dream pop.</p>
+        <div style="font-size: 2rem;">🌿 ✨ 🎧</div>
+    </section>
+
+    <section class="panel">
+        <h2>Top 5 Artists</h2>
+        <div class="list-container">
+            <div class="item-row">
+                <img src="https://via.placeholder.com/50?text=C" alt="Clairo">
+                <span>Clairo</span>
+            </div>
+            <div class="item-row">
+                <img src="https://via.placeholder.com/50?text=CT" alt="Cocteau Twins">
+                <span>Cocteau Twins</span>
+            </div>
+            <div class="item-row">
+                <img src="https://via.placeholder.com/50?text=FM" alt="Fleetwood Mac">
+                <span>Fleetwood Mac</span>
+            </div>
+            <div class="item-row">
+                <img src="https://via.placeholder.com/50?text=WB" alt="Weyes Blood">
+                <span>Weyes Blood</span>
+            </div>
+            <div class="item-row">
+                <img src="https://via.placeholder.com/50?text=MM" alt="Matt Maltese">
+                <span>Matt Maltese</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Top 5 Songs</h2>
+        <p style="font-size: 0.8rem; opacity: 0.7;">Hover to play</p>
+        <div class="list-container">
+            
+            <div class="item-row">
+                <img src="https://via.placeholder.com/50" alt="Harbor">
+                <div style="flex-grow: 1;">
+                    <strong>Harbor</strong><br><small>Clairo</small>
+                    <div class="player-container">
+                        <iframe class="spotify-mini" src="https://open.spotify.com/embed/track/1yYmPr7I1Xm6hF62X0I1Z4" frameborder="0" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-row">
+                <img src="https://via.placeholder.com/50" alt="Rilkean Heart">
+                <div style="flex-grow: 1;">
+                    <strong>Rilkean Heart</strong><br><small>Cocteau Twins</small>
+                    <div class="player-container">
+                        <iframe class="spotify-mini" src="https://open.spotify.com/embed/track/3067n83U8p6E3y9zF4L29m" frameborder="0" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-row">
+                <img src="https://via.placeholder.com/50" alt="Dreams">
+                <div style="flex-grow: 1;">
+                    <strong>Dreams</strong><br><small>Fleetwood Mac</small>
+                    <div class="player-container">
+                        <iframe class="spotify-mini" src="https://open.spotify.com/embed/track/0U3uSipZ7v7_696Y54mS_r" frameborder="0" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-row">
+                <img src="https://via.placeholder.com/50" alt="Andromeda">
+                <div style="flex-grow: 1;">
+                    <strong>Andromeda</strong><br><small>Weyes Blood</small>
+                    <div class="player-container">
+                        <iframe class="spotify-mini" src="https://open.spotify.com/embed/track/51YM8S9Yv8Uf9KzW9S7C6G" frameborder="0" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-row">
+                <img src="https://via.placeholder.com/50" alt="Irony">
+                <div style="flex-grow: 1;">
+                    <strong>As the Irony Would Have It</strong><br><small>Matt Maltese</small>
+                    <div class="player-container">
+                        <iframe class="spotify-mini" src="https://open.spotify.com/embed/track/17S0LzP0193Z2lP3n0hXpX" frameborder="0" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
