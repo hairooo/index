@@ -137,7 +137,7 @@
 <div class="wrapper">
     
     <section class="panel about-panel">
-        <img src="https://via.placeholder.com/180" alt="Me" class="profile-img">
+        <img src="ooakoto.png"Me" class="profile-img">
         <h1>Hi, I'm Gabriel</h1>
         <p>A lover of ethereal sounds and calm aesthetics. I enjoy binge watching my favorite films and listening to dream pop.</p>
         <div style="font-size: 2rem;">🌿 ✨ 🎧</div>
@@ -147,24 +147,24 @@
         <h2>Top 5 Artists</h2>
         <div class="list-container">
             <div class="item-row">
-                <img src="https://via.placeholder.com/50?text=C" alt="Clairo">
-                <span>Clairo</span>
+                <img src="Clairo.jpg" alt="Clairo">
+                <span><b>Clairo<b></span>
             </div>
             <div class="item-row">
-                <img src="https://via.placeholder.com/50?text=CT" alt="Cocteau Twins">
-                <span>Cocteau Twins</span>
+                <img src="CocteuTwins.jpg" alt="Cocteau Twins">
+                <span><b>Cocteau Twins<b></span>
             </div>
             <div class="item-row">
-                <img src="https://via.placeholder.com/50?text=FM" alt="Fleetwood Mac">
-                <span>Fleetwood Mac</span>
+                <img src="FleetwoodMac.jpg" alt="Fleetwood Mac">
+                <span><b>Fleetwood Mac<b></span>
             </div>
             <div class="item-row">
-                <img src="https://via.placeholder.com/50?text=WB" alt="Weyes Blood">
-                <span>Weyes Blood</span>
+                <img src="WeyesBlood.jpg" alt="Weyes Blood">
+                <span><b>Weyes Blood<b></span>
             </div>
             <div class="item-row">
-                <img src="https://via.placeholder.com/50?text=MM" alt="Matt Maltese">
-                <span>Matt Maltese</span>
+                <img src="MattMaltese.jpg" alt="Matt Maltese">
+                <span><b>Matt Maltese<b></span>
             </div>
         </div>
     </section>
@@ -175,9 +175,9 @@
         <div class="list-container">
             
             <div class="item-row">
-                <img src="https://via.placeholder.com/50" alt="Harbor">
+                <img src="harbor.jpg" alt="Harbor">
                 <div style="flex-grow: 1;">
-                    <strong>Harbor</strong><br><small>Clairo</small>
+                    <strong><b>Harbor<b></strong><br><small>Clairo</small>
                     <div class="player-container">
                         <iframe class="spotify-mini" src="https://open.spotify.com/embed/track/1yYmPr7I1Xm6hF62X0I1Z4" frameborder="0" allow="encrypted-media"></iframe>
                     </div>
@@ -185,9 +185,9 @@
             </div>
 
             <div class="item-row">
-                <img src="https://via.placeholder.com/50" alt="Rilkean Heart">
+                <img src="rilkeanheart.jpg" alt="Rilkean Heart">
                 <div style="flex-grow: 1;">
-                    <strong>Rilkean Heart</strong><br><small>Cocteau Twins</small>
+                    <strong><b>Rilkean Heart<b></strong><br><small>Cocteau Twins</small>
                     <div class="player-container">
                         <iframe class="spotify-mini" src="https://open.spotify.com/embed/track/3067n83U8p6E3y9zF4L29m" frameborder="0" allow="encrypted-media"></iframe>
                     </div>
@@ -195,9 +195,9 @@
             </div>
 
             <div class="item-row">
-                <img src="https://via.placeholder.com/50" alt="Dreams">
+                <img src="dreams.jpg" alt="Dreams">
                 <div style="flex-grow: 1;">
-                    <strong>Dreams</strong><br><small>Fleetwood Mac</small>
+                    <strong><b>Dreams<b></strong><br><small>Fleetwood Mac</small>
                     <div class="player-container">
                         <iframe class="spotify-mini" src="https://open.spotify.com/embed/track/0U3uSipZ7v7_696Y54mS_r" frameborder="0" allow="encrypted-media"></iframe>
                     </div>
@@ -205,9 +205,9 @@
             </div>
 
             <div class="item-row">
-                <img src="https://via.placeholder.com/50" alt="Andromeda">
+                <img src="Andromeda.jpg" alt="Andromeda">
                 <div style="flex-grow: 1;">
-                    <strong>Andromeda</strong><br><small>Weyes Blood</small>
+                    <strong><b>Andromeda<b></strong><br><small>Weyes Blood</small>
                     <div class="player-container">
                         <iframe class="spotify-mini" src="https://open.spotify.com/embed/track/51YM8S9Yv8Uf9KzW9S7C6G" frameborder="0" allow="encrypted-media"></iframe>
                     </div>
@@ -215,9 +215,9 @@
             </div>
 
             <div class="item-row">
-                <img src="https://via.placeholder.com/50" alt="Irony">
+                <img src="Ironywouldhaveit.jpg" alt="Irony">
                 <div style="flex-grow: 1;">
-                    <strong>As the Irony Would Have It</strong><br><small>Matt Maltese</small>
+                    <strong><b>Irony Would Have It<b></strong><br><small>Matt Maltese</small>
                     <div class="player-container">
                         <iframe class="spotify-mini" src="https://open.spotify.com/embed/track/17S0LzP0193Z2lP3n0hXpX" frameborder="0" allow="encrypted-media"></iframe>
                     </div>
