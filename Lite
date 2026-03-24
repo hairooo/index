@@ -137,7 +137,7 @@
 <div class="wrapper">
     
     <section class="panel about-panel">
-        <img src="ooakoto.png"Me" class="profile-img">
+        <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/ooakoto.png"Me" class="profile-img">
         <h1>Hi, I'm Gabriel</h1>
         <p>A lover of ethereal sounds and calm aesthetics. I enjoy binge watching my favorite films and listening to dream pop.</p>
         <div style="font-size: 2rem;">🌿 ✨ 🎧</div>
@@ -147,23 +147,23 @@
         <h2>Top 5 Artists</h2>
         <div class="list-container">
             <div class="item-row">
-                <img src="Clairo.jpg" alt="Clairo">
+                <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/Clairo.jpg" alt="Clairo">
                 <span><b>Clairo<b></span>
             </div>
             <div class="item-row">
-                <img src="CocteuTwins.jpg" alt="Cocteau Twins">
+                <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/CocteuTwins.jpg" alt="Cocteau Twins">
                 <span><b>Cocteau Twins<b></span>
             </div>
             <div class="item-row">
-                <img src="FleetwoodMac.jpg" alt="Fleetwood Mac">
+                <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/FleetwoodMac.jpg" alt="Fleetwood Mac">
                 <span><b>Fleetwood Mac<b></span>
             </div>
             <div class="item-row">
-                <img src="WeyesBlood.jpg" alt="Weyes Blood">
+                <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/WeyesBlood.jpg" alt="Weyes Blood">
                 <span><b>Weyes Blood<b></span>
             </div>
             <div class="item-row">
-                <img src="MattMaltese.jpg" alt="Matt Maltese">
+                <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/MattMaltese.jpg" alt="Matt Maltese">
                 <span><b>Matt Maltese<b></span>
             </div>
         </div>
@@ -175,7 +175,7 @@
         <div class="list-container">
             
             <div class="item-row">
-                <img src="harbor.jpg" alt="Harbor">
+                <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/harbor.jpg" alt="Harbor">
                 <div style="flex-grow: 1;">
                     <strong><b>Harbor<b></strong><br><small>Clairo</small>
                     <div class="player-container">
@@ -185,7 +185,7 @@
             </div>
 
             <div class="item-row">
-                <img src="rilkeanheart.jpg" alt="Rilkean Heart">
+                <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/rilkeanheart.jpg" alt="Rilkean Heart">
                 <div style="flex-grow: 1;">
                     <strong><b>Rilkean Heart<b></strong><br><small>Cocteau Twins</small>
                     <div class="player-container">
@@ -195,7 +195,7 @@
             </div>
 
             <div class="item-row">
-                <img src="dreams.jpg" alt="Dreams">
+                <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/dreams.jpg" alt="Dreams">
                 <div style="flex-grow: 1;">
                     <strong><b>Dreams<b></strong><br><small>Fleetwood Mac</small>
                     <div class="player-container">
@@ -215,7 +215,7 @@
             </div>
 
             <div class="item-row">
-                <img src="Ironywouldhaveit.jpg" alt="Irony">
+                <img src="https://raw.githubusercontent.com/hairooo/index/refs/heads/main/images/Ironywouldhaveit.jpg" alt="Irony">
                 <div style="flex-grow: 1;">
                     <strong><b>Irony Would Have It<b></strong><br><small>Matt Maltese</small>
                     <div class="player-container">
