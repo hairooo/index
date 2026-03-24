@@ -42,25 +42,47 @@
         }
 
         .polaroid {
-            background: white;
-            padding: 10px 10px 30px 10px;
-            box-shadow: 3px 5px 15px rgba(0,0,0,0.15);
-            width: 150px;
-            transition: 0.4s;
-            position: relative;
-            cursor: pointer;
-        }
-        .polaroid img { width: 100%; height: 150px; object-fit: cover; }
-        .polaroid p { font-family: 'Homemade Apple', cursive; font-size: 0.75rem; margin-top: 10px; text-align: center; }
+    background: white;
+    padding: 15px 15px 40px 15px; [span_2](start_span)/* The classic Polaroid frame[span_2](end_span) */
+    box-shadow: 3px 5px 15px rgba(0,0,0,0.15);
+    width: 170px;
+    transition: 0.4s ease;
+    position: relative; [span_3](start_span)/* CRITICAL: Keeps the hover info inside[span_3](end_span) */
+    cursor: pointer;
+    overflow: hidden; /* This clips the hover effect to the Polaroid's corners */
+}
 
-        .polaroid:hover { transform: scale(1.1) rotate(0deg); z-index: 10; }
-        .polaroid-info {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(255,255,255,0.95);
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; transition: 0.3s; padding: 10px; text-align: center; font-size: 0.7rem;
-        }
-        .polaroid:hover .polaroid-info { opacity: 1; }
+.polaroid img {
+    width: 100%;
+    height: 170px; [span_4](start_span)[span_5](start_span)/* Matches width for a square photo[span_4](end_span)[span_5](end_span) */
+    object-fit: cover;
+    display: block;
+}
+
+.polaroid-info {
+    position: absolute;
+    /* This ensures it covers the padding and the image perfectly */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--ink); [span_6](start_span)/* Matches your scrapbook theme[span_6](end_span) */
+    z-index: 2;
+}
+
+.polaroid:hover .polaroid-info {
+    opacity: 1;
+}
+
 
         /* Paper Scraps */
         .paper-scrap {
@@ -118,7 +140,7 @@
 
 <div class="scrapbook">
     <header>
-        <h1>Gab</h1>
+        <h1>Gabriel</h1>
         <p>— A soul full of stories and dreams —</p>
     </header>
 
